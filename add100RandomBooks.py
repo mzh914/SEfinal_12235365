@@ -39,10 +39,10 @@ apiKey = getAuthToken()
 
 # Using the faker module, generate random "fake" books
 fake = Faker()
-for i in range(4, 105):
+for i in range(0, 25):
     fakeTitle = fake.catch_phrase()
     fakeAuthor = fake.name()
     fakeISBN = fake.isbn13()
     book = {"id":i, "title": fakeTitle, "author": fakeAuthor, "isbn": fakeISBN}
     # add the new random "fake" book using the API
-    addBook(book, apiKey) 
+    addBook(book, apiKey)
